@@ -1,3 +1,4 @@
+// can't figure this one out? tried upcase/lowercase and other variations of the code
 const apiUrl = "https://fsa-crud-2aa9294fe819.herokuapp.com/api/2412-FTB-MT-WEB-PT/parties";
 
 // shows all parties
@@ -7,6 +8,7 @@ async function fetchParties() {
     const partyList = document.getElementById("party-list");
     partyList.innerHTML = "";
 
+    // loop through all parties and put in list
     data.forEach(party => {
         const li = document.createElement("li");
         li.innerHTML = `
@@ -23,6 +25,7 @@ async function fetchParties() {
 async function newEntry(event) {
     event.preventDefault();
     
+    // get values from form
     const party = {
         name: document.getElementById("name").value,
         date: document.getElementById("date").value,
@@ -31,6 +34,7 @@ async function newEntry(event) {
         description: document.getElementById("description").value
     };
 
+    // post to api
     await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
