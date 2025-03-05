@@ -1,5 +1,5 @@
 // can't figure this one out? tried upcase/lowercase and other variations of the code
-const apiUrl = "https://fsa-crud-2aa9294fe819.herokuapp.com/api/2412-FTB-MT-WEB-PT/parties";
+const apiUrl = "https://fsa-crud-2aa9294fe819.herokuapp.com/api/2412-FTB-MT-WEB-PT/events";
 
 // shows all parties
 async function fetchParties() {
